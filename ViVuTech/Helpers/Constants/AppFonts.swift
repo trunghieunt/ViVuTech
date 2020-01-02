@@ -17,7 +17,7 @@
 //    static func coreSansGS65Bold(_ size: CGFloat) -> UIFont {
 //        return UIFont.init(name: "CoreSansGS-65Bold", size: size) ?? UIFont.systemFont(ofSize: size, weight: .bold)
 //    }
-//    
+//
 //    static func coreSansGS65BoldItalic(_ size: CGFloat) -> UIFont {
 //        return UIFont.init(name: "CoreSansGS-65BoldItalic", size: size) ?? UIFont.italicSystemFont(ofSize: size)
 //    }
