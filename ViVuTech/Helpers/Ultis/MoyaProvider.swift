@@ -7,20 +7,20 @@
 //
 
 import Foundation
-import Alamofire
+//import Alamofire
 import Moya
 
-struct Provider {
-    static let sharedManager: Alamofire.SessionManager = {
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        configuration.timeoutIntervalForRequest = 30 // as seconds, you can set your request timeout
-        configuration.timeoutIntervalForResource = 30 // as seconds, you can set your resource timeout
-        let manager = Alamofire.SessionManager(configuration: configuration)
-        manager.adapter = CustomRequestAdapter()
-        return manager
-    }()
-}
+//struct Provider {
+//    static let sharedManager: Alamofire.SessionManager = {
+//        let configuration = URLSessionConfiguration.default
+//        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+//        configuration.timeoutIntervalForRequest = 30 // as seconds, you can set your request timeout
+//        configuration.timeoutIntervalForResource = 30 // as seconds, you can set your resource timeout
+//        let manager = Alamofire.SessionManager(configuration: configuration)
+//        manager.adapter = CustomRequestAdapter()
+//        return manager
+//    }()
+//}
 
 private class CustomRequestAdapter: RequestAdapter {
     public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
