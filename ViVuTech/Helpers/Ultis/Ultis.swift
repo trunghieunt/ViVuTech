@@ -7,22 +7,8 @@
 //
 
 import Foundation
-import PopupDialog
 
 struct Ultis {
-    
-    static func showAlertEndSession() {
-        let sessionExpriedPopup = SessionExpriedPopup.loadFromNib()
-        sessionExpriedPopup.confirmHandler = {
-            logout()
-        }
-        let popupVC = PopupDialog.init(viewController: sessionExpriedPopup, tapGestureDismissal: false, panGestureDismissal: false)
-        
-        guard let topVC = UIApplication.topViewController() else {
-            return
-        }
-        topVC.present(popupVC, animated: true, completion: nil)
-    }
     
     static func logout() {
         User.shared.removeFromLocal()

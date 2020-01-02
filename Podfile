@@ -8,7 +8,6 @@ target 'ViVuTech' do
   pod 'Tabman', '2.4.1'
   pod 'PullToRefreshKit'
   pod 'UITextView+Placeholder'
-  pod 'PopupDialog'
   pod 'Toast-Swift', '~> 5.0.0'
   pod 'SwiftyJSON'
   pod 'Moya', '~> 13.0'

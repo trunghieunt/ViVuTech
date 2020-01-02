@@ -9,7 +9,6 @@
 import Foundation
 import CoreLocation
 import UIKit
-import PopupDialog
 
 class AppLocation: NSObject {
     
@@ -24,30 +23,6 @@ class AppLocation: NSObject {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-    }
-    
-    func showAlertOpenSettingLocation() {
-        let locationAlertVC = AlertVC.loadFromNib()
-        locationAlertVC.titleAlert = "Thông báo".localized()
-        locationAlertVC.content = "Ứng dụng cần sử dụng quyền truy cập vị trí. Vui lòng bật lại trong cài đặt".localized()
-        locationAlertVC.titleButton = "CÀI ĐẶT".localized()
-        locationAlertVC.hideCloseButton = true
-        locationAlertVC.confirmHandler = {
-            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-                return
-            }
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
-            } else {
-                // Fallback on earlier versions
-                UIApplication.shared.openURL(settingsUrl)
-            }
-        }
-        let popupVC = PopupDialog.init(viewController: locationAlertVC, tapGestureDismissal: false, panGestureDismissal: false)
-        guard let topVC = UIApplication.topViewController() else {
-            return
-        }
-        topVC.present(popupVC, animated: true, completion: nil)
     }
     
     @objc func checkLocationServicesEnabled() {
