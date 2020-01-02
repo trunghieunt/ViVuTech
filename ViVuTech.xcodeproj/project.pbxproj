@@ -28,7 +28,6 @@
 		93A8CA09E17508627C08D866 /* Pods-ViVuTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViVuTech.release.xcconfig"; path = "Target Support Files/Pods-ViVuTech/Pods-ViVuTech.release.xcconfig"; sourceTree = "<group>"; };
 		EAB6A1AF23BDDD860014202E /* libViVuTech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViVuTech.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB6A1B223BDDD860014202E /* ViVuTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViVuTech.swift; sourceTree = "<group>"; };
-		EAB6A1B923BDDE070014202E /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helpers; sourceTree = "<group>"; };
 		EDD949E2798B227D10B79141 /* Pods_ViVuTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViVuTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -50,7 +49,6 @@
 				6C1284FF6DC2C75E572885A5 /* Pods-ViVuTech.debug.xcconfig */,
 				93A8CA09E17508627C08D866 /* Pods-ViVuTech.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				EAB6A1B223BDDD860014202E /* ViVuTech.swift */,
-				EAB6A1B923BDDE070014202E /* Helpers */,
 			);
 			path = ViVuTech;
 			sourceTree = "<group>";
