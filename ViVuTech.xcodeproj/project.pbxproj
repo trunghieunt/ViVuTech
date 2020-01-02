@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A44654CF10D843ECF365CC51 /* Pods_ViVuTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35E5D6EDC3278AEE8E805F8 /* Pods_ViVuTech.framework */; };
 		EAB6A1B323BDDD860014202E /* ViVuTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB6A1B223BDDD860014202E /* ViVuTech.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +24,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		55CE4908231B39C90D6C89F3 /* Pods-ViVuTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViVuTech.release.xcconfig"; path = "Target Support Files/Pods-ViVuTech/Pods-ViVuTech.release.xcconfig"; sourceTree = "<group>"; };
+		CF05A9BC9C0BF3FF0E83D021 /* Pods-ViVuTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViVuTech.debug.xcconfig"; path = "Target Support Files/Pods-ViVuTech/Pods-ViVuTech.debug.xcconfig"; sourceTree = "<group>"; };
+		E35E5D6EDC3278AEE8E805F8 /* Pods_ViVuTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViVuTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB6A1AF23BDDD860014202E /* libViVuTech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViVuTech.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB6A1B223BDDD860014202E /* ViVuTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViVuTech.swift; sourceTree = "<group>"; };
+		EAB6A1B923BDDE070014202E /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helpers; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44654CF10D843ECF365CC51 /* Pods_ViVuTech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D965CF18D30A13293875202 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF05A9BC9C0BF3FF0E83D021 /* Pods-ViVuTech.debug.xcconfig */,
+				55CE4908231B39C90D6C89F3 /* Pods-ViVuTech.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4ED4537729B40A045E324847 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E35E5D6EDC3278AEE8E805F8 /* Pods_ViVuTech.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EAB6A1A623BDDD860014202E = {
 			isa = PBXGroup;
 			children = (
 				EAB6A1B123BDDD860014202E /* ViVuTech */,
 				EAB6A1B023BDDD860014202E /* Products */,
+				4D965CF18D30A13293875202 /* Pods */,
+				4ED4537729B40A045E324847 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				EAB6A1B223BDDD860014202E /* ViVuTech.swift */,
+				EAB6A1B923BDDE070014202E /* Helpers */,
 			);
 			path = ViVuTech;
 			sourceTree = "<group>";
@@ -69,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAB6A1B623BDDD860014202E /* Build configuration list for PBXNativeTarget "ViVuTech" */;
 			buildPhases = (
+				9F3DE2E9F354C7A9C87CB7AA /* [CP] Check Pods Manifest.lock */,
 				EAB6A1AB23BDDD860014202E /* Sources */,
 				EAB6A1AC23BDDD860014202E /* Frameworks */,
 				EAB6A1AD23BDDD860014202E /* CopyFiles */,
@@ -114,6 +142,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F3DE2E9F354C7A9C87CB7AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ViVuTech-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EAB6A1AB23BDDD860014202E /* Sources */ = {
@@ -243,6 +296,7 @@
 		};
 		EAB6A1B723BDDD860014202E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF05A9BC9C0BF3FF0E83D021 /* Pods-ViVuTech.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DUBLSFJH5H;
@@ -256,6 +310,7 @@
 		};
 		EAB6A1B823BDDD860014202E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CE4908231B39C90D6C89F3 /* Pods-ViVuTech.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DUBLSFJH5H;

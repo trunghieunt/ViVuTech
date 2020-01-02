@@ -7,5 +7,7 @@
 //
 
 class ViVuTech {
-
+    public static func hieuOC() -> String {
+        return "hieu oc cho"
+    }
 }
