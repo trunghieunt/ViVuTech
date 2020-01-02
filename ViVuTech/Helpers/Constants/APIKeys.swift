@@ -6,10 +6,10 @@
 //  Copyright © 2019 Viettel Post Joint Stock Corporation. All rights reserved.
 //
 
-import Foundation
-
-
-struct APIKeys {
-    static let googleMap = "AIzaSyAS8CBKUnkbxejwGI-Yt3uIuNP-147ykCk"
-}
-// GMSServices.provideAPIKey("YOUR_API_KEY")
+//import Foundation
+//
+//
+//struct APIKeys {
+//    static let googleMap = "AIzaSyAS8CBKUnkbxejwGI-Yt3uIuNP-147ykCk"
+//}
+//// GMSServices.provideAPIKey("YOUR_API_KEY")
