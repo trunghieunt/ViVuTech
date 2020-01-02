@@ -8,7 +8,7 @@
 
 import Foundation
 //import Alamofire
-import Moya
+//import Moya
 
 //struct Provider {
 //    static let sharedManager: Alamofire.SessionManager = {
@@ -22,10 +22,10 @@ import Moya
 //    }()
 //}
 
-private class CustomRequestAdapter: RequestAdapter {
-    public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        var urlRequest = urlRequest
-        urlRequest.setValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
-        return urlRequest
-    }
-}
+//private class CustomRequestAdapter: RequestAdapter {
+//    public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+//        var urlRequest = urlRequest
+//        urlRequest.setValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
+//        return urlRequest
+//    }
+//}

@@ -10,7 +10,7 @@ target 'ViVuTech' do
   pod 'UITextView+Placeholder'
   pod 'Toast-Swift', '~> 5.0.0'
   pod 'SwiftyJSON'
-  pod 'Moya', '~> 13.0'
+#  pod 'Moya', '~> 13.0'
   pod 'IQKeyboardManagerSwift'
   # Pods for ViVuTech
   
